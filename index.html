@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAU Impact Hub | Diplomacy, Leadership, and Community Action in Ethiopia</title>
+    
+    <link rel="icon" type="image/png" href="https://placehold.co/32x32/79430c/ffffff?text=MAU">
+    <link rel="apple-touch-icon" href="https://placehold.co/180x180/79430c/ffffff?text=MAU">
+    
+    <meta name="description" content="MAU Impact Hub: Cultivating the next generation of diplomatic leaders in Addis Ababa, Ethiopia, through Model African Union simulations and community action programs.">
+    <meta property="og:title" content="MAU Impact Hub: Diplomacy meets Action">
+    <meta property="og:description" content="Cultivating the next generation of diplomatic leaders in Addis Ababa, Ethiopia.">
+    <meta property="og:image" content="https://placehold.co/1200x630/79430c/FFD799?text=MAU+IMPACT+HUB">
+    <meta property="og:url" content="https://your-website-url.com">
+    <meta property="og:type" content="website">
+
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <style>
+        /* --- 1. Custom Colors (Warm Palette) --- */
+        :root {
+            --color-brown: #79430c; 
+            --color-yellow: #FFD799; 
+            --color-cream: #FFFBF5; 
+            --color-white: #ffffff;
+        }
+        
+        /* Basic Utility Classes */
+        .bg-brown { background-color: var(--color-brown); } 
+        .text-brown { color: var(--color-brown); }
+        .bg-yellow-light { background-color: var(--color-yellow); }
+        .text-yellow-light { color: var(--color-yellow); }
+        .bg-cream { background-color: var(--color-cream); }
+
+        /* --- Global Layout & Font --- */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 140px; 
+        }
+
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            overflow-x: hidden; 
+        }
+        
+        h1, h2, h3, .playfair-display {
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        /* --- 2. Shining & Glowing Text Effects --- */
+        .shining-text {
+            background: linear-gradient(90deg, 
+                #ffffff 0%, 
+                var(--color-yellow) 10%, 
+                #ffffff 20%, 
+                var(--color-yellow) 40%, 
+                #ffffff 50%,
+                var(--color-yellow) 60%,
+                #ffffff 80%,
+                var(--color-yellow) 90%,
+                #ffffff 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+            background-size: 200% auto;
+        }
+
+        .glow-text {
+            color: var(--color-yellow);
+            text-shadow: 0 0 10px rgba(255, 215, 153, 0.8), 0 0 20px rgba(255, 215, 153, 0.4);
+            animation: softGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes softGlow {
+            from { text-shadow: 0 0 10px rgba(255, 215, 153, 0.6); }
+            to { text-shadow: 0 0 20px rgba(255, 215, 153, 1), 0 0 30px rgba(255, 255, 255, 0.6); }
+        }
+
+        .nav-link:hover, .btn-apply-now:hover {
+            background: linear-gradient(90deg, 
+                #ffffff 0%, 
+                var(--color-yellow) 10%, 
+                #ffffff 20%, 
+                var(--color-yellow) 40%, 
+                #ffffff 50%,
+                var(--color-yellow) 60%,
+                #ffffff 80%,
+                var(--color-yellow) 90%,
+                #ffffff 100%
+            );
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shine 5s linear infinite;
+            background-size: 200% auto;
+        }
+        
+        @keyframes shine {
+            to { background-position: -200% center; }
+        }
+
+        /* --- 3. Marquee --- */
+        .marquee {
+            width: 100%;
+            overflow: hidden;
+            white-space: nowrap;
+            box-sizing: border-box;
+            background-color: var(--color-yellow);
+            color: var(--color-brown);
+            padding: 8px 0;
+            border-top: 2px solid var(--color-brown);
+            border-bottom: 2px solid var(--color-brown);
+            position: relative;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            padding-left: 100%;
+            animation: marquee-move 30s linear infinite;
+            font-weight: 700;
+            font-size: 1.125rem;
+            letter-spacing: 0.05em;
+        }
+
+        @keyframes marquee-move {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(-100%, 0); }
+        }
+        
+        /* --- 4. Interactive Elements & Transitions --- */
+        
+        .btn-primary {
+            background-color: var(--color-brown);
+            color: white;
+            transition: all 0.4s ease-in-out;
+            box-shadow: 0 4px 15px rgba(121, 67, 12, 0.2);
+        }
+        .btn-primary:hover {
+            background-color: var(--color-yellow);
+            color: var(--color-brown);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 8px 20px rgba(255, 215, 153, 0.5);
+            border: 1px solid var(--color-brown); 
+        }
+
+        .interactive-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+            border: 1px solid transparent;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); 
+        }
+        .interactive-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 20px rgba(255, 215, 153, 0.7), 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-color: var(--color-yellow);
+        }
+
+        /* GLOW EFFECT for Programs */
+        .program-card-glow {
+            transition: all 0.4s ease-in-out;
+        }
+        .program-card-glow:hover {
+            box-shadow: 0 0 25px 5px rgba(255, 215, 153, 0.9); /* Strong Golden Glow */
+            transform: scale(1.02);
+            border-color: var(--color-brown);
+        }
+        
+        /* --- 5. Slideshow Styling --- */
+        .slideshow-container {
+            overflow: hidden;
+            width: 100%;
+            border: 4px solid var(--color-brown);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .slideshow-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            flex: 0 0 100%;
+            width: 100%;
+        }
+
+        /* Background Pattern for Home */
+        .home-bg-pattern {
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 215, 153, 0.1) 2px, transparent 2px);
+            background-size: 30px 30px;
+        }
+
+        /* Decorative Map Outline (CSS only trick) */
+        .map-decoration {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80%;
+            height: 80%;
+            background: url("data:image/svg+xml,%3Csvg width='200' height='200' viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill='%23FFD799' fill-opacity='0.05' d='M45.7,-76.3C58.9,-69.3,69.1,-55.6,76.5,-41.3C83.9,-27,88.5,-12.1,86.6,1.9C84.7,15.9,76.3,29,66.6,40.3C56.9,51.6,45.9,61.1,33.5,67.6C21.1,74.1,7.3,77.6,-5.5,86.6C-18.3,95.6,-30.1,110.1,-41.1,107.8C-52.1,105.5,-62.3,86.4,-70.5,69.5C-78.7,52.6,-84.9,37.9,-85.7,23.3C-86.5,8.7,-81.9,-5.8,-75.4,-19.1C-68.9,-32.4,-60.5,-44.5,-49.6,-52.4C-38.7,-60.3,-25.3,-64,-12.3,-64.3C0.7,-64.6,1.4,-61.5,14.4,-57.4' transform='translate(100 100)' /%3E%3C/svg%3E") no-repeat center center;
+            background-size: contain;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.6;
+            animation: pulseMap 10s infinite alternate;
+        }
+
+        @keyframes pulseMap {
+            from { transform: translate(-50%, -50%) scale(1); }
+            to { transform: translate(-50%, -50%) scale(1.1); }
+        }
+
+    </style>
+    
+    <!-- JavaScript for Local Storage Data Management -->
+    <script>
+        // --- LOCAL STORAGE KEYS ---
+        const LS_KEY_GALLERY = 'mau_gallery_data';
+        const LS_KEY_SLIDESHOW = 'mau_slideshow_data';
+
+        // --- PLACEHOLDERS ---
+        const SLIDESHOW_PLACEHOLDERS = [
+            { id: 'slide_0', type: 'slideshow', order: 0, caption: "Global Impact Day: Leaders in Policy", imageUrl: "https://placehold.co/800x400/79430c/FFD799?text=Policy+Debate+Event", isPlaceholder: true },
+            { id: 'slide_1', type: 'slideshow', order: 1, caption: "Ethics Workshop: Cultivating Integrity", imageUrl: "https://placehold.co/800x400/FFD799/79430c?text=Leadership+Workshop", isPlaceholder: true },
+            { id: 'slide_2', type: 'slideshow', order: 2, caption: "Annual Assembly: Diplomacy in Action", imageUrl: "https://placehold.co/800x400/79430c/FFFBF5?text=MAU+Simulation", isPlaceholder: true },
+        ];
+        
+        const GALLERY_PLACEHOLDERS = [
+            { id: 'gal_0', type: 'gallery', title: 'Leadership Workshop', eventType: 'Workshop', date: 'Oct 2024', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+1", isPlaceholder: true },
+            { id: 'gal_1', type: 'gallery', title: 'Diplomacy Summit', eventType: 'Summit', date: 'Nov 2024', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+2", isPlaceholder: true },
+            { id: 'gal_2', type: 'gallery', title: 'Ethical Influence Debate', eventType: 'Debate', date: 'Dec 2024', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+3", isPlaceholder: true },
+            { id: 'gal_3', type: 'gallery', title: 'Community Impact Project', eventType: 'Project', date: 'Jan 2025', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+4", isPlaceholder: true },
+            { id: 'gal_4', type: 'gallery', title: 'Future Leaders Training', eventType: 'Training', date: 'Feb 2025', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+5", isPlaceholder: true },
+            { id: 'gal_5', type: 'gallery', title: 'Model African Union Sim', eventType: 'Simulation', date: 'Mar 2025', imageUrl: "https://placehold.co/600x400/FFFBF5/79430c?text=Click+to+Add+Image+6", isPlaceholder: true },
+        ];
+
+        // --- UTILITY FUNCTIONS ---
+
+        window.showMessage = (title, content) => {
+            document.getElementById('messageTitle').textContent = title;
+            document.getElementById('messageContent').textContent = content;
+            document.getElementById('messageBox').classList.remove('hidden');
+            document.getElementById('messageBox').classList.add('flex');
+        };
+
+        window.hideMessage = () => {
+            document.getElementById('messageBox').classList.add('hidden');
+            document.getElementById('messageBox').classList.remove('flex');
+        };
+
+        const loadData = (key, defaultData) => {
+            try {
+                if (typeof localStorage !== 'undefined') {
+                    const data = localStorage.getItem(key);
+                    if (data) {
+                        return JSON.parse(data);
+                    }
+                }
+            } catch (error) {
+                console.warn(`[Local Storage] Error loading ${key}`, error);
+            }
+            return defaultData;
+        };
+
+        const saveData = (key, data) => {
+            try {
+                if (typeof localStorage !== 'undefined') {
+                    localStorage.setItem(key, JSON.stringify(data));
+                }
+            } catch (error) {
+                console.error(`[Local Storage] Error saving ${key}`, error);
+                showMessage("Storage Error", "Could not save changes. Security restrictions may apply.");
+            }
+        };
+
+        // --- MODAL CONTROL FUNCTIONS ---
+        
+        window.showEditModal = (activity) => {
+            document.getElementById('edit-doc-id').value = activity.id;
+            const title = activity.title || '';
+            document.getElementById('edit-title').value = title.includes('Placeholder') ? title.replace('Placeholder', '').trim() : title;
+            document.getElementById('edit-event-type').value = activity.eventType || '';
+            document.getElementById('edit-date').value = activity.date || '';
+            const imageUrl = activity.imageUrl || '';
+            document.getElementById('edit-image-url').value = imageUrl.includes('placehold.co') ? '' : imageUrl;
+
+            document.getElementById('editGalleryModal').classList.remove('hidden');
+            document.getElementById('editGalleryModal').classList.add('flex');
+        };
+
+        window.hideEditModal = () => {
+            document.getElementById('editGalleryModal').classList.add('hidden');
+            document.getElementById('editGalleryModal').classList.remove('flex');
+            document.getElementById('edit-gallery-form').reset();
+            renderGallery(); 
+        };
+        
+        window.showSlideshowManager = () => {
+            const activities = loadData(LS_KEY_SLIDESHOW, SLIDESHOW_PLACEHOLDERS);
+            const container = document.getElementById('slideshow-edit-forms');
+            container.innerHTML = ''; 
+
+            activities.forEach((activity, index) => {
+                const formHtml = `
+                    <div class="bg-cream p-4 rounded-xl shadow mb-4 border border-brown/20">
+                        <h4 class="text-xl font-semibold text-brown mb-3 playfair-display">Slide ${activity.order + 1}</h4>
+                        <p class="text-xs text-gray-500 mb-2">Tip: Use direct links (ending in .jpg, .png).</p>
+                        <form class="slideshow-edit-form space-y-3" data-id="${activity.id}">
+                            <div>
+                                <label class="block text-sm font-medium text-brown">Caption</label>
+                                <input type="text" name="caption" value="${activity.caption || ''}" required class="mt-1 block w-full px-3 py-1 border border-brown rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-brown">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-brown">Image URL (Direct Link)</label>
+                                <input type="url" name="imageUrl" placeholder="https://..." value="${activity.imageUrl && !activity.imageUrl.includes('placehold.co') ? activity.imageUrl : ''}" required class="mt-1 block w-full px-3 py-1 border border-brown rounded-lg shadow-inner focus:outline-none focus:ring-2 focus:ring-brown">
+                            </div>
+                            <div class="flex justify-end pt-2">
+                                <button type="submit" class="bg-brown text-white hover:bg-brown/80 px-4 py-1 rounded-lg text-sm font-semibold transition duration-200">
+                                    Save Slide ${activity.order + 1}
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                `;
+                container.innerHTML += formHtml;
+            });
+            
+            document.querySelectorAll('.slideshow-edit-form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const form = e.target;
+                    const id = form.getAttribute('data-id');
+                    const data = {
+                        caption: form.elements['caption'].value,
+                        imageUrl: form.elements['imageUrl'].value,
+                    };
+                    updateSlideshowItem(id, data);
+                    // Don't hide immediately to allow multiple edits, or you can uncomment below
+                    // hideSlideshowManager(); 
+                });
+            });
+
+            document.getElementById('editSlideshowManagerModal').classList.remove('hidden');
+            document.getElementById('editSlideshowManagerModal').classList.add('flex');
+        };
+
+        window.hideSlideshowManager = () => {
+            document.getElementById('editSlideshowManagerModal').classList.add('hidden');
+            document.getElementById('editSlideshowManagerModal').classList.remove('flex');
+            renderSlideshow(); // Ensure re-render on close
+        };
+
+        // --- SLIDESHOW LOGIC ---
+        let currentSlide = 0;
+        let slideshowInterval; 
+
+        const updateSlideshowItem = (id, data) => {
+            let slides = loadData(LS_KEY_SLIDESHOW, SLIDESHOW_PLACEHOLDERS);
+            // Convert to string for safety comparison
+            const index = slides.findIndex(s => String(s.id) === String(id));
+            
+            if (index !== -1) {
+                slides[index] = { ...slides[index], ...data, isPlaceholder: false };
+                saveData(LS_KEY_SLIDESHOW, slides);
+                renderSlideshow();
+                
+                // Visual feedback on the specific button
+                const btn = document.querySelector(`form[data-id="${id}"] button`);
+                if(btn) {
+                    const originalText = btn.innerText;
+                    btn.innerText = "Saved!";
+                    btn.classList.add("bg-green-600");
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.remove("bg-green-600");
+                    }, 1500);
+                }
+            } else {
+                console.error("Slide ID not found:", id);
+            }
+        };
+
+        const renderSlideshow = () => {
+            const data = loadData(LS_KEY_SLIDESHOW, SLIDESHOW_PLACEHOLDERS);
+            window.currentSlideshowData = data; 
+            
+            const track = document.getElementById('slideshow-track');
+            const dotsContainer = document.getElementById('slideshow-dots');
+            
+            clearInterval(slideshowInterval);
+            track.innerHTML = '';
+            dotsContainer.innerHTML = '';
+            
+            if (currentSlide >= data.length) {
+                currentSlide = 0;
+            }
+
+            data.forEach((item, index) => {
+                // If the user has saved a URL, use it. Only fallback if strictly empty.
+                // We do NOT strictly validate the URL structure here to avoid blocking ImgBB or other CDNs.
+                const imageUrl = item.imageUrl || SLIDESHOW_PLACEHOLDERS[index % SLIDESHOW_PLACEHOLDERS.length].imageUrl;
+                
+                const slide = document.createElement('div');
+                slide.className = 'slide relative';
+                slide.innerHTML = `
+                    <img src="${imageUrl}" alt="${item.caption}" 
+                         class="w-full h-auto object-cover rounded-lg"
+                         onerror="this.onerror=null; this.src='https://placehold.co/800x400/FFD799/79430c?text=Image+Load+Error';">
+                    <div class="absolute bottom-0 left-0 right-0 bg-brown bg-opacity-80 text-white p-4 rounded-b-lg">
+                        <p class="text-lg font-semibold">${item.caption}</p>
+                    </div>
+                `;
+                track.appendChild(slide);
+
+                const dot = document.createElement('span');
+                dot.className = `w-3 h-3 rounded-full cursor-pointer transition duration-300 ${index === currentSlide ? 'bg-brown scale-125' : 'bg-gray-400 hover:bg-brown/70'}`;
+                dot.onclick = () => {
+                    goToSlide(index);
+                    clearInterval(slideshowInterval);
+                    slideshowInterval = setInterval(nextSlide, 5000);
+                };
+                dotsContainer.appendChild(dot);
+            });
+            updateSlideshowTransform();
+            
+            if (data.length > 0) {
+                slideshowInterval = setInterval(nextSlide, 5000);
+            }
+        };
+
+        const updateSlideshowTransform = () => {
+            const track = document.getElementById('slideshow-track');
+            if (track) {
+                track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            }
+            const dots = document.querySelectorAll('#slideshow-dots span');
+            dots.forEach((dot, index) => {
+                dot.className = `w-3 h-3 rounded-full cursor-pointer transition duration-300 ${index === currentSlide ? 'bg-brown scale-125' : 'bg-gray-400 hover:bg-brown/70'}`;
+            });
+        };
+
+        const nextSlide = () => {
+            const data = loadData(LS_KEY_SLIDESHOW, SLIDESHOW_PLACEHOLDERS);
+            currentSlide = (currentSlide + 1) % data.length;
+            updateSlideshowTransform();
+        };
+
+        const goToSlide = (index) => {
+            currentSlide = index;
+            updateSlideshowTransform();
+        }
+
+        // --- GALLERY CORE LOGIC ---
+
+        const updateGalleryItem = (id, data) => {
+            let activities = loadData(LS_KEY_GALLERY, GALLERY_PLACEHOLDERS);
+            // Ensure strictly string comparison
+            const index = activities.findIndex(a => String(a.id) === String(id));
+            
+            if (index !== -1) {
+                activities[index] = { ...activities[index], ...data, isPlaceholder: false };
+                saveData(LS_KEY_GALLERY, activities);
+                renderGallery();
+                showMessage("Success", "Gallery item updated successfully.");
+                hideEditModal();
+            } else {
+                console.error("Gallery ID not found:", id);
+            }
+        };
+
+        const renderGallery = () => {
+            const container = document.getElementById('dynamic-gallery');
+            const loading = document.getElementById('gallery-loading');
+            container.innerHTML = '';
+            
+            let itemsToRender = loadData(LS_KEY_GALLERY, GALLERY_PLACEHOLDERS);
+            
+            // Re-merge placeholders if lost (fail-safe)
+             GALLERY_PLACEHOLDERS.forEach(placeholder => {
+                if (!itemsToRender.find(item => item.id === placeholder.id)) {
+                     itemsToRender.push(placeholder);
+                }
+            });
+            
+            // Sort by ID to keep order stable
+            itemsToRender.sort((a, b) => String(a.id).localeCompare(String(b.id))).slice(0, 6);
+
+            loading.classList.add('hidden');
+            container.classList.remove('hidden');
+
+            itemsToRender.forEach(activity => {
+                const isPlaceholder = activity.isPlaceholder || false;
+                const card = document.createElement('div');
+                
+                const cardClass = isPlaceholder 
+                    ? 'bg-cream/50 interactive-card border-2 border-dashed border-brown/50 cursor-pointer rounded-xl' 
+                    : 'interactive-card bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl cursor-pointer border border-yellow-light/30';
+
+                card.className = cardClass;
+                const displayTitle = activity.title?.includes('Placeholder') ? activity.title.replace('Placeholder', '').trim() : activity.title;
+
+                card.onclick = () => showEditModal(activity); 
+
+                const imageSrc = activity.imageUrl;
+                const clickText = isPlaceholder ? 'Click to edit...' : 'View details...';
+                
+                card.innerHTML = `
+                    <!-- Image -->
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="${imageSrc}" alt="${displayTitle}" 
+                             loading="lazy" 
+                             class="w-full h-full object-cover transition duration-700 hover:scale-[1.1]"
+                             onerror="this.onerror=null; this.src='https://placehold.co/600x400/FFD799/79430c?text=Load+Error';">
+                        <span class="absolute bottom-3 left-3 bg-brown/90 text-yellow-light text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            ${activity.eventType || 'Event'}
+                        </span>
+                        <span class="absolute top-3 right-3 bg-brown text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                            ${activity.date || 'N/A'}
+                        </span>
+                    </div>
+                    <!-- Content -->
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-brown mb-2 playfair-display">${displayTitle}</h3>
+                        <p class="text-gray-500 text-sm italic">${clickText}</p>
+                    </div>
+                `;
+                container.appendChild(card);
+            });
+        };
+        
+        // --- INITIALIZATION ---
+        
+        const initializeApp = () => {
+            if (loadData(LS_KEY_GALLERY, null) === null) {
+                saveData(LS_KEY_GALLERY, GALLERY_PLACEHOLDERS);
+            }
+            if (loadData(LS_KEY_SLIDESHOW, null) === null) {
+                saveData(LS_KEY_SLIDESHOW, SLIDESHOW_PLACEHOLDERS);
+            }
+
+            renderSlideshow();
+            renderGallery();
+        };
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initializeApp();
+            
+            const menuButton = document.getElementById('menu-button');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            menuButton.addEventListener('click', () => {
+                const isExpanded = mobileMenu.classList.toggle('hidden');
+                menuButton.setAttribute('aria-expanded', isExpanded ? 'false' : 'true');
+            });
+            menuButton.setAttribute('aria-controls', 'mobile-menu');
+            menuButton.setAttribute('aria-expanded', 'false');
+
+            document.querySelectorAll('#mobile-menu a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                    menuButton.setAttribute('aria-expanded', 'false');
+                });
+            });
+
+            document.getElementById('edit-gallery-form').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const form = e.target;
+                const docId = form.elements['edit-doc-id'].value;
+                const data = {
+                    title: form.elements['edit-title'].value,
+                    eventType: form.elements['edit-event-type'].value,
+                    date: form.elements['edit-date'].value,
+                    imageUrl: form.elements['edit-image-url'].value,
+                };
+                updateGalleryItem(docId, data);
+            });
+
+            document.getElementById('application-form').addEventListener('submit', async (e) => {
+                e.preventDefault();
+                const form = e.target;
+                
+                const motivationText = form.elements['motivation'].value.trim();
+                if (motivationText.length < 50) {
+                    showMessage("Validation Error", "Please provide a detailed motivation summary (min 50 characters).");
+                    return;
+                }
+
+                const formData = new FormData(form);
+                let schoolName = form.elements['universitySelect'].value;
+                const manualSchool = form.elements['schoolManual'].value.trim();
+                
+                if (!schoolName && manualSchool) {
+                     schoolName = manualSchool;
+                } else if (!schoolName) {
+                     schoolName = "Not Specified";
+                }
+                formData.set('SchoolOrUniversity', schoolName);
+                
+                try {
+                    const response = await fetch(form.action, {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    });
+
+                    if (response.ok) {
+                        showMessage("Application Submitted", "Your application has been successfully sent!");
+                        form.reset();
+                    } else {
+                        showMessage("Submission Failed", "There was an issue submitting your application.");
+                    }
+                } catch (error) {
+                    showMessage("Network Error", "Could not submit the form.");
+                }
+            });
+        });
+
+    </script>
+</head>
+<body class="bg-white text-gray-800">
+
+    <!-- Message Box -->
+    <div id="messageBox" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 items-center justify-center p-4" onclick="hideMessage()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-sm w-full transform transition-all duration-300 scale-95" onclick="event.stopPropagation()">
+            <h3 class="text-xl font-bold text-brown mb-3 playfair-display" id="messageTitle"></h3>
+            <p id="messageContent" class="text-gray-700 mb-4"></p>
+            <button onclick="hideMessage()" class="w-full btn-primary py-2 rounded-lg transition duration-200">Close</button>
+        </div>
+    </div>
+
+    <!-- Edit Gallery Modal -->
+    <div id="editGalleryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 items-center justify-center p-4" onclick="hideEditModal()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-lg w-full transform transition-all duration-300 scale-95" onclick="event.stopPropagation()">
+            <h3 class="text-2xl font-bold text-brown mb-4 playfair-display">Edit Gallery Item</h3>
+            <form id="edit-gallery-form" class="space-y-4">
+                <input type="hidden" id="edit-doc-id" name="docId">
+                <div>
+                    <label class="block text-sm font-medium text-brown">Title</label>
+                    <input type="text" id="edit-title" name="title" required class="mt-1 block w-full px-4 py-2 border border-brown rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-brown">Event Type</label>
+                    <input type="text" id="edit-event-type" name="event_type" required class="mt-1 block w-full px-4 py-2 border border-brown rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-brown">Date</label>
+                    <input type="text" id="edit-date" name="date" required class="mt-1 block w-full px-4 py-2 border border-brown rounded-lg">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-brown">Image URL (Direct Link)</label>
+                    <input type="url" id="edit-image-url" name="image_url" placeholder="https://i.ibb.co/..." required class="mt-1 block w-full px-4 py-2 border border-brown rounded-lg">
+                </div>
+                <div class="flex justify-between items-center pt-2">
+                    <button type="button" onclick="hideEditModal()" class="text-brown hover:underline px-4 py-2">Cancel</button>
+                    <button type="submit" class="btn-primary py-2 px-6 rounded-lg font-semibold">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <!-- Edit Slideshow Manager Modal -->
+    <div id="editSlideshowManagerModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 items-center justify-center p-4" onclick="hideSlideshowManager()">
+        <div class="bg-white p-6 rounded-xl shadow-2xl max-w-xl w-full max-h-[90vh] overflow-y-auto transform transition-all duration-300 scale-95" onclick="event.stopPropagation()">
+            <h3 class="text-2xl font-bold text-brown mb-2 playfair-display">Manage Slideshow</h3>
+            <div id="slideshow-edit-forms"></div>
+            <div class="flex justify-end pt-4 border-t border-gray-200">
+                <button type="button" onclick="hideSlideshowManager()" class="btn-primary py-2 px-6 rounded-lg font-semibold">Close Manager</button>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Header / Navigation Bar -->
+    <header id="navbar" class="header-fixed sticky top-0 bg-brown text-white z-40 shadow-xl">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <a href="#home" class="text-3xl font-extrabold tracking-wider shining-text p-1 transition duration-300 playfair-display">MAU Impact Hub</a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#vision" class="nav-link hover:text-yellow-light transition duration-300 text-lg font-medium">Founder's Vision</a>
+                <a href="#gallery-section" class="nav-link hover:text-yellow-light transition duration-300 text-lg font-medium">Gallery</a>
+                <a href="#programs" class="nav-link hover:text-yellow-light transition duration-300 text-lg font-medium">Programs</a>
+                <a href="#contact-info" class="nav-link hover:text-yellow-light transition duration-300 text-lg font-medium">Contact</a>
+                <a href="#join-form" class="bg-yellow-light text-brown px-6 py-2 rounded-full font-bold shadow-md transform hover:scale-105 btn-apply-now text-center transition duration-300">
+                    <span class="block text-base leading-none">Apply</span>
+                    <span class="block text-sm leading-none">Now</span>
+                </a>
+            </div>
+            <!-- Mobile Menu Button -->
+            <button id="menu-button" role="button" aria-label="Toggle Mobile Menu" aria-controls="mobile-menu" class="md:hidden text-white focus:outline-none p-2 rounded-lg hover:bg-yellow-light hover:text-brown transition duration-200">
+                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-brown shadow-xl">
+            <a href="#vision" class="block px-4 py-3 text-white text-base hover:bg-gray-700 transition duration-200">Founder's Vision</a>
+            <a href="#gallery-section" class="block px-4 py-3 text-white text-base hover:bg-gray-700 transition duration-200">Gallery</a>
+            <a href="#programs" class="block px-4 py-3 text-white text-base hover:bg-gray-700 transition duration-200">Programs</a>
+            <a href="#contact-info" class="block px-4 py-3 text-white text-base hover:bg-gray-700 transition duration-200">Contact</a>
+            <a href="#join-form" class="block px-4 py-3 text-base bg-yellow-light text-brown font-bold hover:bg-white transition duration-200">Apply to Join</a>
+        </div>
+    </header>
+    
+    <!-- Moving Text Header -->
+    <div class="marquee sticky top-[72px] md:top-[68px] z-30">
+        <div class="marquee-content uppercase">
+            <span class="px-8 text-lg md:text-xl">&mdash; Shaping the Next Generation of Leaders &mdash;</span> 
+            <span class="px-8 text-lg md:text-xl">&mdash; Diplomacy & Leadership in Action &mdash;</span>
+            <span class="px-8 text-lg md:text-xl">&mdash; Ethical Influence, Global Impact &mdash;</span>
+            <span class="px-8 text-lg md:text-xl">&mdash; Shaping the Next Generation of Leaders &mdash;</span> 
+        </div>
+    </div>
+
+    <main>
+        <!-- 1. Home / Landing Page (Longer: min-h-[85vh]) -->
+        <section id="home" class="bg-brown min-h-[90vh] flex items-center justify-center text-center relative overflow-hidden p-6 pt-20 pb-16 home-bg-pattern">
+            <!-- New Background Decorations -->
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-brown/80 z-0"></div>
+            <div class="map-decoration"></div>
+
+            <div class="relative z-10 p-6 max-w-5xl mx-auto">
+                <h1 class="text-6xl md:text-8xl font-extrabold mb-8 leading-tight tracking-tighter">
+                    <span class="shining-text">MAU Impact Hub</span>
+                </h1>
+                
+                <p class="text-2xl md:text-4xl text-white italic font-light mb-10 playfair-display">
+                    Where Diplomacy meets Action.
+                </p>
+
+                <!-- New Glowing Text Block -->
+                <div class="mb-14 space-y-2">
+                    <h2 class="text-3xl md:text-4xl font-bold uppercase tracking-widest glow-text">User-Led Organization</h2>
+                    <h3 class="text-xl md:text-2xl font-semibold tracking-wider text-yellow-light/90 glow-text">Addis Ababa, Ethiopia</h3>
+                </div>
+
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <a href="#join-form" class="btn-primary text-xl font-bold px-12 py-4 rounded-full shadow-2xl border-2 border-yellow-light/20">
+                        Start Your Leadership Journey
+                    </a>
+                    <a href="#programs" class="text-white text-xl font-medium hover:text-yellow-light transition duration-300 underline underline-offset-4 decoration-yellow-light">
+                        Explore Our Programs &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Founder's Vision & Impact Crate -->
+        <!-- Increased padding-top (pt-32) to push content down away from the crate overlap -->
+        <section id="vision" class="pt-32 pb-24 bg-white relative">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                
+                <!-- Impact Statistics Crate -->
+                <!-- Changed to -translate-y-12 to lower it (less overlap with hero) -->
+                <div class="transform -translate-y-12 z-20 relative bg-cream border-4 border-yellow-light rounded-2xl shadow-2xl max-w-5xl mx-auto p-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-center mb-16">
+                    <div>
+                        <h4 class="text-5xl font-extrabold text-brown mb-2 playfair-display">500+</h4>
+                        <p class="text-lg font-semibold text-gray-700 uppercase tracking-widest">Youth Reached</p>
+                    </div>
+                    <div class="md:border-l-2 md:border-r-2 border-brown/20">
+                        <h4 class="text-5xl font-extrabold text-brown mb-2 playfair-display">11+</h4>
+                        <p class="text-lg font-semibold text-gray-700 uppercase tracking-widest">Impact Projects</p>
+                    </div>
+                    <div>
+                        <h4 class="text-5xl font-extrabold text-brown mb-2 playfair-display">8+</h4>
+                        <p class="text-lg font-semibold text-gray-700 uppercase tracking-widest">Conferences</p>
+                    </div>
+                </div>
+
+                <!-- NEW: Leadership Journey Timeline -->
+                <div class="max-w-5xl mx-auto mb-20 mt-8 transform hover:scale-105 transition duration-500">
+                    <div class="relative flex flex-col md:flex-row justify-between items-center bg-brown rounded-2xl md:rounded-full p-8 md:p-6 shadow-2xl overflow-hidden border border-yellow-light/20">
+                        <!-- Background Glow -->
+                        <div class="absolute inset-0 bg-gradient-to-r from-brown via-yellow-900 to-brown opacity-90"></div>
+                        
+                        <!-- Content -->
+                        <div class="relative z-10 flex flex-col md:flex-row items-center w-full justify-around space-y-6 md:space-y-0">
+                            
+                            <!-- Step 1: Observer -->
+                            <div class="flex flex-col items-center group">
+                                <div class="w-3 h-3 bg-yellow-light rounded-full mb-3 shadow-[0_0_10px_rgba(255,215,153,0.8)]"></div>
+                                <span class="text-lg md:text-xl font-bold text-yellow-light tracking-widest uppercase glow-text">Observer</span>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="text-yellow-light/50 text-2xl transform rotate-90 md:rotate-0 animate-pulse">
+                                ➜
+                            </div>
+
+                            <!-- Step 2: Delegate -->
+                             <div class="flex flex-col items-center group">
+                                <div class="w-3 h-3 bg-yellow-light rounded-full mb-3 shadow-[0_0_10px_rgba(255,215,153,0.8)]"></div>
+                                <span class="text-lg md:text-xl font-bold text-yellow-light tracking-widest uppercase glow-text">Delegate</span>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="text-yellow-light/50 text-2xl transform rotate-90 md:rotate-0 animate-pulse">
+                                ➜
+                            </div>
+
+                            <!-- Step 3: President -->
+                             <div class="flex flex-col items-center group">
+                                <div class="w-3 h-3 bg-yellow-light rounded-full mb-3 shadow-[0_0_10px_rgba(255,215,153,0.8)]"></div>
+                                <span class="text-lg md:text-xl font-bold text-yellow-light tracking-widest uppercase glow-text">President</span>
+                            </div>
+
+                            <!-- Arrow -->
+                            <div class="text-yellow-light/50 text-2xl transform rotate-90 md:rotate-0 animate-pulse">
+                                ➜
+                            </div>
+
+                            <!-- Step 4: Founder (Highlighted) -->
+                             <div class="flex flex-col items-center group relative">
+                                <!-- Beacon Effect -->
+                                <div class="absolute -top-6 w-full h-full bg-white/10 blur-xl rounded-full animate-pulse"></div>
+                                <div class="w-5 h-5 bg-white rounded-full mb-2 shadow-[0_0_20px_rgba(255,255,255,1)] animate-ping absolute top-0 opacity-50"></div>
+                                <div class="w-5 h-5 bg-white rounded-full mb-2 shadow-[0_0_20px_rgba(255,255,255,1)] relative z-10"></div>
+                                <span class="text-2xl md:text-3xl font-extrabold text-white tracking-widest uppercase shining-text" style="text-shadow: 0 0 15px rgba(255,215,153,0.8);">Founder</span>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <h2 class="text-5xl font-extrabold text-center text-brown mb-16 relative playfair-display">
+                    Founder's Vision and Leadership Story
+                    <span class="block h-1 w-24 bg-yellow-light mx-auto mt-4 rounded-full"></span>
+                </h2>
+
+                <!-- Founder Content - BLOCKED & STYLED -->
+                <div class="max-w-5xl mx-auto mb-16">
+                    <div class="bg-gray-50 p-10 md:p-14 rounded-3xl shadow-xl border-l-8 border-brown relative overflow-hidden">
+                        <!-- Decorative quote mark -->
+                        <span class="absolute top-4 right-8 text-9xl text-brown/10 font-serif leading-none">”</span>
+                        
+                        <h3 class="text-3xl font-bold text-brown mb-8 playfair-display text-center relative z-10">From Observer to Founder: My Journey</h3>
+                        
+                        <div class="space-y-6 text-lg text-gray-700 leading-relaxed relative z-10 text-justify">
+                            <p class="first-letter:text-4xl first-letter:font-bold first-letter:text-brown first-letter:mr-1">
+                                The foundation of this club at our school, guided by our history teacher, marked a pivotal moment. Initially, I was simply an observer. As it was the first time such a club was established, I watched from the sidelines, not participating.
+                            </p>
+                            <p>
+                                The following year, I was eager to move from observer to participant. I joined the club and immediately gained valuable experience, particularly when I had the opportunity to attend and participate in the African Union Assembly. This exposure profoundly built my confidence, honed my diplomatic skills, and solidified my understanding of leadership.
+                            </p>
+                            <p>
+                                By Grade 12, the trust and skills I had developed led me to be elected President of the club. This position further boosted my confidence, refined my organizational capabilities, and was a profound period of self-discovery.
+                            </p>
+                            <p >
+                                Upon graduating, I didn't want this journey to end. To continue cultivating leaders, I founded the high level club known as MAU Impact Hub. Here, we discuss crucial ideas, issues, and topics that truly matter, fostering a culture of peace, ethical influence, and proactive leadership. This is how the club began, and how it continues to inspire a new generation.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slideshow Header and Edit Button -->
+                <div class="flex flex-col sm:flex-row justify-center items-center mt-16 mb-8 gap-4">
+                    <h3 class="text-3xl font-bold text-brown playfair-display">Inspiration in Action</h3>
+                    <button onclick="showSlideshowManager()" class="btn-primary py-2 px-4 text-sm rounded-lg shadow-md hover:bg-yellow-light hover:text-brown transition duration-200">
+                         Manage Slides
+                    </button>
+                </div>
+                
+                <!-- Photo Slideshow -->
+                <div id="slideshow" class="slideshow-container max-w-5xl mx-auto rounded-xl">
+                    <div id="slideshow-track" class="slideshow-track">
+                        <!-- Dynamic Content -->
+                    </div>
+                </div>
+                <div id="slideshow-dots" class="flex justify-center mt-4 space-x-2"></div>
+            </div>
+        </section>
+
+
+        <!-- 3. Activity and Gallery Section -->
+        <section id="gallery-section" class="py-16 md:py-24 bg-cream border-t border-brown/10">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-center items-center mb-12">
+                    <h2 class="text-4xl font-extrabold text-brown playfair-display text-center">Activity and Gallery</h2>
+                </div>
+                <p class="text-gray-600 mb-12 max-w-3xl mx-auto text-center text-lg">
+                    A visual archive of our diplomacy sessions, leadership workshops, and community events in Addis Ababa.
+                </p>
+
+                <div id="gallery-loading" class="text-center p-8">
+                    <div class="w-10 h-10 border-4 border-brown border-t-transparent border-solid rounded-full animate-spin inline-block"></div>
+                </div>
+                
+                <div id="dynamic-gallery" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 hidden">
+                    <!-- Dynamic Gallery Items -->
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Our Elite Programs (Responsive & Glowing) -->
+        <section id="programs" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 class="text-5xl font-extrabold text-center text-brown mb-16 playfair-display">Our Elite Programs</h2>
+
+                <div class="grid md:grid-cols-2 gap-10 max-w-6xl mx-auto mb-20">
+                    <!-- Program Card 1: Diplomatic Track -->
+                    <div class="program-card-glow bg-gray-50 p-10 rounded-2xl shadow-xl border-t-8 border-brown cursor-pointer h-full flex flex-col">
+                        <div class="flex items-center mb-6">
+                            <span class="text-5xl mr-4"></span>
+                            <h3 class="text-4xl font-bold playfair-display text-brown">The Diplomatic Track</h3>
+                        </div>
+                        <p class="text-lg text-brown font-semibold mb-6 border-b border-gray-300 pb-3">Core MAU Simulation & Global Affairs</p>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed flex-grow">
+                            This rigorous program simulates the workings of the African Union. Students step into the shoes of diplomats, researching country policies, drafting resolutions, and debating critical continental issues. It focuses on public speaking, conflict resolution, and understanding the complex machinery of international relations.
+                        </p>
+                        
+                        <div class="mt-8 bg-cream p-4 rounded-lg border border-yellow-light">
+                            <h4 class="font-bold text-brown mb-2">Key Highlights:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Weekly Guided Debate Sessions</li>
+                                <li>Resolution Drafting Workshops</li>
+                                <li>Annual Inter-School MAU Conference</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Program Card 2: Impact Accelerator -->
+                    <div class="program-card-glow bg-gray-50 p-10 rounded-2xl shadow-xl border-t-8 border-yellow-light cursor-pointer h-full flex flex-col">
+                        <div class="flex items-center mb-6">
+                            <span class="text-5xl mr-4"></span>
+                            <h3 class="text-4xl font-bold playfair-display text-brown">The Impact Accelerator</h3>
+                        </div>
+                        <p class="text-lg text-brown font-semibold mb-6 border-b border-gray-300 pb-3">Leadership & Community Action</p>
+                        
+                        <p class="text-gray-700 text-lg leading-relaxed flex-grow">
+                            Moving beyond theory, this track empowers members to launch real-world community service projects. We provide project management training, mentorship from industry leaders, and resources to turn ideas into tangible social impact. From environmental cleanups to educational tutoring, we bring diplomacy to the streets.
+                        </p>
+                        
+                        <div class="mt-8 bg-cream p-4 rounded-lg border border-yellow-light">
+                            <h4 class="font-bold text-brown mb-2">Key Highlights:</h4>
+                            <ul class="list-disc list-inside text-gray-700 space-y-1">
+                                <li>Project Management Certification</li>
+                                <li>Community Service Hours</li>
+                                <li>Social Impact Funding Access</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Application Form Section -->
+                <div id="join-form" class="max-w-3xl mx-auto p-10 md:p-14 bg-yellow-light/20 rounded-3xl shadow-2xl border border-brown">
+                    <h3 class="text-4xl font-extrabold text-brown text-center mb-4 playfair-display">Ready to Lead? Apply Now.</h3>
+                    <p class="text-center text-gray-700 mb-10 text-lg">Join a network of over 500+ young leaders across Ethiopia.</p>
+                    
+                    <form id="application-form" class="space-y-6" action="https://formspree.io/f/xovogjkl" method="POST">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullName" class="block text-sm font-bold text-brown mb-2">Full Name</label>
+                                <input type="text" id="fullName" name="fullName" required class="w-full px-4 py-3 border border-brown/30 rounded-lg focus:ring-2 focus:ring-brown focus:outline-none bg-white">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-bold text-brown mb-2">Email Address</label>
+                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-brown/30 rounded-lg focus:ring-2 focus:ring-brown focus:outline-none bg-white">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label for="universitySelect" class="block text-sm font-bold text-brown mb-2">University (Select from List)</label>
+                            <select id="universitySelect" name="universitySelect" class="w-full px-4 py-3 border border-brown/30 rounded-lg focus:ring-2 focus:ring-brown focus:outline-none bg-white mb-4">
+                                <option value="">--- Select Your University ---</option>
+                                <optgroup label="Public Universities">
+                                    <option value="Addis Ababa University">Addis Ababa University</option>
+                                    <option value="Adama Science and Technology University">Adama Science and Technology University (ASTU)</option>
+                                    <option value="Addis Ababa Science and Technology University">Addis Ababa Science and Technology University (AASTU)</option>
+                                    <option value="Adigrat University">Adigrat University</option>
+                                    <option value="Aksum University">Aksum University</option>
+                                    <option value="Ambo University">Ambo University</option>
+                                    <option value="Arba Minch University">Arba Minch University</option>
+                                    <option value="Arsi University">Arsi University</option>
+                                    <option value="Assosa University">Assosa University</option>
+                                    <option value="Bahir Dar University">Bahir Dar University</option>
+                                    <option value="Bonga University">Bonga University</option>
+                                    <option value="Bule Hora University">Bule Hora University</option>
+                                    <option value="Dabat University">Dabat University</option>
+                                    <option value="Debre Berhan University">Debre Berhan University</option>
+                                    <option value="Debre Markos University">Debre Markos University</option>
+                                    <option value="Debre Tabor University">Debre Tabor University</option>
+                                    <option value="Dilla University">Dilla University</option>
+                                    <option value="Dire Dawa University">Dire Dawa University</option>
+                                    <option value="Ethiopian Civil Service University">Ethiopian Civil Service University</option>
+                                    <option value="Gambella University">Gambella University</option>
+                                    <option value="Gode University">Gode University</option>
+                                    <option value="Gondar University">University of Gondar</option>
+                                    <option value="Haramaya University">Haramaya University</option>
+                                    <option value="Hawassa University">Hawassa University</option>
+                                    <option value="Injibara University">Injibara University</option>
+                                    <option value="Jigjiga University">Jigjiga University</option>
+                                    <option value="Jimma University">Jimma University</option>
+                                    <option value="Jinka University">Jinka University</option>
+                                    <option value="Kebri Dehar University">Kebri Dehar University</option>
+                                    <option value="Kotebe University of Education">Kotebe University of Education</option>
+                                    <option value="Mada Walabu University">Mada Walabu University</option>
+                                    <option value="Mekelle University">Mekelle University</option>
+                                    <option value="Mettu University">Mettu University</option>
+                                    <option value="Mizan-Tepi University">Mizan-Tepi University</option>
+                                    <option value="Oda Bultum University">Oda Bultum University</option>
+                                    <option value="Raya University">Raya University</option>
+                                    <option value="Salale University">Salale University</option>
+                                    <option value="Samara University">Samara University</option>
+                                    <option value="Wachemo University">Wachemo University</option>
+                                    <option value="Werabe University">Werabe University</option>
+                                    <option value="Woldia University">Woldia University</option>
+                                    <option value="Wolkite University">Wolkite University</option>
+                                    <option value="Wollega University">Wollega University</option>
+                                    <option value="Wollo University">Wollo University</option>
+                                </optgroup>
+                                <optgroup label="Private Universities/Colleges">
+                                    <option value="St. Mary's University">St. Mary's University</option>
+                                    <option value="Unity University">Unity University</option>
+                                    <option value="Rift Valley University">Rift Valley University</option>
+                                    <option value="Addis Ababa Medical and Business College">Addis Ababa Medical and Business College</option>
+                                    <option value="HiLCoE">HiLCoE School of Computer Science</option>
+                                    <option value="MicroLink">MicroLink Information Technology College</option>
+                                    <option value="Leadstar">Leadstar College of Management and Leadership</option>
+                                </optgroup>
+                            </select>
+
+                            <label for="schoolManual" class="block text-sm font-bold text-brown mb-2">Or School (If High School / Not Listed)</label>
+                            <input type="text" id="schoolManual" name="schoolManual" placeholder="Type your High School name here..." class="w-full px-4 py-3 border border-brown/30 rounded-lg focus:ring-2 focus:ring-brown focus:outline-none bg-white">
+                        </div>
+
+                        <div>
+                            <label for="motivation" class="block text-sm font-bold text-brown mb-2">Motivation Summary (Max ~500 words)</label>
+                            <textarea id="motivation" name="motivation" rows="6" required class="w-full px-4 py-3 border border-brown/30 rounded-lg focus:ring-2 focus:ring-brown focus:outline-none bg-white" placeholder="Why do you want to join MAU Impact Hub?"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="w-full btn-primary py-4 rounded-xl font-bold shadow-xl text-xl tracking-wide uppercase">
+                            Submit Application
+                        </button>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- 5. Contact Information (Footer) -->
+        <footer id="contact-info" class="bg-brown text-white py-16">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+                <div class="grid md:grid-cols-3 gap-12 border-b border-yellow-light/30 pb-12 mb-12">
+                    
+                    <!-- Logo / Title -->
+                    <div>
+                        <h3 class="text-3xl font-extrabold tracking-wider shining-text mb-4 playfair-display">MAU Impact Hub</h3>
+                        <p class="text-sm text-yellow-light leading-relaxed">Cultivating the next generation of diplomatic leaders through simulation, education, and action.</p>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div>
+                        <h4 class="text-xl font-bold text-yellow-light mb-6 playfair-display border-b border-white/20 pb-2 inline-block">Quick Links</h4>
+                        <ul class="space-y-3 text-base">
+                            <li><a href="#vision" class="hover:text-yellow-light hover:pl-2 transition-all duration-300">Founder's Story</a></li>
+                            <li><a href="#gallery-section" class="hover:text-yellow-light hover:pl-2 transition-all duration-300">Activity Gallery</a></li>
+                            <li><a href="#programs" class="hover:text-yellow-light hover:pl-2 transition-all duration-300">Our Programs</a></li>
+                            <li><a href="#join-form" class="hover:text-yellow-light hover:pl-2 transition-all duration-300">Join Us</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Details -->
+                    <div>
+                        <h4 class="text-xl font-bold text-yellow-light mb-6 playfair-display border-b border-white/20 pb-2 inline-block">Get In Touch</h4>
+                        <ul class="space-y-4 text-base">
+                            <li class="flex items-center group">
+                                <span class="mr-4 bg-yellow-light text-brown p-2 rounded-full text-xs">✉</span>
+                                <a href="mailto:contact@mauimpacthub.org" class="group-hover:text-yellow-light transition duration-200">contact@mauimpacthub.org</a>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-4 bg-yellow-light text-brown p-2 rounded-full text-xs">📞</span>
+                                <span>+251 900 298 682</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-4 bg-yellow-light text-brown p-2 rounded-full text-xs">📞</span>
+                                <span>+251 975 381 677</span>
+                            </li>
+                            <li class="flex items-center">
+                                <span class="mr-4 bg-yellow-light text-brown p-2 rounded-full text-xs">📍</span>
+                                <span>Addis Ababa, Ethiopia</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center text-sm text-yellow-light/60">
+                    &copy; 2025 MAU Impact Hub. All rights reserved.
+                </div>
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
